@@ -1,0 +1,26 @@
+function same_digits() {
+  // Start from the number 1
+  let num = 1;
+
+  // Keep incrementing the number until we find one that
+  // has the same digits when multiplied by 2, 3, 4, 5, and 6
+  while (true) {
+    // Convert the number to a string
+    const numStr = String(num);
+
+    // Check if the number has the same digits when multiplied by 2, 3, 4, 5, and 6
+    if (
+      numStr === String(num * 2) &&
+      numStr === String(num * 3) &&
+      numStr === String(num * 4) &&
+      numStr === String(num * 5) &&
+      numStr === String(num * 6)
+    ) {
+      // If it does, return the number
+      return num;
+    }
+
+    // Otherwise, increment the number and try again
+    num += 1;
+  }
+}
